@@ -1,0 +1,6 @@
+<ion-item>
+  <ion-label>Month</ion-label>
+  <ion-select [(ngModel)]="selectedMonth" [selectedText]="selectedMonth.name" (ionChange)="monthSelected()" required>
+    <ion-select-option *ngFor="let month of months" [value]="month" [selected]="month.id == selectedMonth.id">{{month.name}}</ion-select-option>
+  </ion-select>
+</ion-item>
